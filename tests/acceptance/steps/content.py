@@ -15,8 +15,6 @@ def step_impl(context):
 @step('The title tag has content "(.*)"')
 def step_impl(context, content):
     page = BasePage(context.driver)
-    print(page.title.text)
-    print(content)
     assert page.title.text == content
 
 
